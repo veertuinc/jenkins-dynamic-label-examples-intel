@@ -1,4 +1,4 @@
-def label = createDynamicAnkaNode masterVmId: '1e0d576a-9d22-44ba-adf9-19ee6ffea672'
+def label = createDynamicAnkaNode masterVmId: 'e56b4aaf-0797-42dd-9ebe-41908bf10a4d'
 
 node(label){
     stage('Sleep') { 
