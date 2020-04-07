@@ -1,1 +1,1 @@
-# Anka Jenkins Plugin Dynamic Labelling (Scripted) Example
+# Anka Jenkins Plugin Dynamic Labelling (Scripted with no def) Example
