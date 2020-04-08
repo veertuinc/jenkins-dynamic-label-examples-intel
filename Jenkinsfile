@@ -12,12 +12,12 @@ pipeline {
   stages {
     stage("command-in-AGENT_LABEL-vm") {
       steps {
-        sh "uname -a"
+        sh "uname -a" // Run within the first AGENT_LABEL VM instance
       }
     }
     stage("nested-vm-stages") {
       stages {
-        stage("launch-nested-vm") {
+        stage("launch-nested-vm") { // Creates a second VM instance which will, after job completion, push to the Registry.
           steps {
             script {
               NESTED_LABEL = createDynamicAnkaNode(
@@ -37,7 +37,7 @@ pipeline {
             // catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
             //   sh 'uname -r; exit 5'
             // }
-            sh 'uname -r'
+            sh 'uname -r' // Run within the NESTED_LABEL VM instance
           }
         }
         stage("check-generated-tag-from-nested-vm") {
