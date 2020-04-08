@@ -38,7 +38,7 @@ pipeline {
         stage("run-on-NESTED_LABEL") {
           agent { label "${NESTED_LABEL}" }
           steps {
-            catchError(buildResult: 'FAILED', stageResult: 'UNSTABLE') {
+            catchError(buildResult: 'FAILURE', stageResult: 'UNSTABLE') {
               sh 'uname -r; exit 5'
             }
           }
