@@ -11,9 +11,6 @@ pipeline {
   agent {
     label "${AGENT_LABEL}"
   }
-  options {
-    skipStagesAfterUnstable()
-  }
   stages {
     stage("command-in-AGENT_LABEL") {
       steps {
@@ -38,7 +35,7 @@ pipeline {
         stage("run-on-NESTED_LABEL") {
           agent { label "${NESTED_LABEL}" }
           steps {
-            catchError(buildResult: 'FAILURE', stageResult: 'UNSTABLE') {
+            catchError(buildResult: 'FAILURE') {
               sh 'uname -r; exit 5'
             }
           }
