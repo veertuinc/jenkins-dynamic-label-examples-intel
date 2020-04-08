@@ -10,7 +10,7 @@ pipeline {
     label "${AGENT_LABEL}"
   }
   stages {
-    stage("command-in-AGENT_LABEL") {
+    stage("command-in-AGENT_LABEL-vm") {
       steps {
         sh "uname -a"
       }
@@ -30,7 +30,7 @@ pipeline {
             }
           }
         }
-        stage("run-on-NESTED_LABEL") {
+        stage("run-on-NESTED_LABEL-vm") {
           agent { label "${NESTED_LABEL}" }
           steps {
             // If buildResults == 'FAILURE', Anka will not push the NESTED_LABEL VM. Example:
