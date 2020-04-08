@@ -17,9 +17,9 @@ pipeline {
          sh "uname -a"
        }
      }
-     stage("nested-stages") {
+     stage("nested-vm-stages") {
        stages {
-         stage("launch-new-vm") {
+         stage("launch-nested-vm") {
            steps {
              script {
               NESTED_LABEL = createDynamicAnkaNode(
@@ -32,14 +32,14 @@ pipeline {
              }
            }
          }
-         stage("run-on-$NESTED_LABEL") {
+         stage("run-on-nested-vm") {
            agent { label "${NESTED_LABEL}" }
            steps {
              sh 'uname -r'
              sh 'sleep 20'
            }
          }
-         stage("wait for finish") {
+         stage("generate-tag-from-nested-vm") {
            steps {
              ankaGetSaveImageResult shouldFail:true, timeoutMinutes: 120
            }
