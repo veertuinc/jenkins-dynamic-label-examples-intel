@@ -25,7 +25,7 @@ pipeline {
                 masterVmId: 'e56b4aaf-0797-42dd-9ebe-41908bf10a4d', 
                 saveImage: true, 
                 suspend: true,
-                deleteLatest: true // Dangerous: only use if the template isn't holding other project tags.
+                deleteLatest: true // Dangerous: only use if the Template isn't holding other project tags.
               )
             }
           }
@@ -34,10 +34,10 @@ pipeline {
           agent { label "${NESTED_LABEL}" }
           steps {
             // If buildResults == 'FAILURE', Anka will not push the NESTED_LABEL VM. Example:
-            catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
-              sh 'uname -r; exit 5'
-            }
-            // sh 'uname -r'
+            // catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
+            //   sh 'uname -r; exit 5'
+            // }
+            sh 'uname -r'
           }
         }
         stage("check-generated-tag-from-nested-vm") {
