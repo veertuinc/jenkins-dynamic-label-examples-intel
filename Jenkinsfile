@@ -15,7 +15,7 @@ pipeline {
     skipStagesAfterUnstable()
   }
   stages {
-    stage("command-in-$AGENT_LABEL") {
+    stage("command-in-AGENT_LABEL") {
       steps {
         sh "uname -a"
       }
@@ -35,7 +35,7 @@ pipeline {
             }
           }
         }
-        stage("run-on-nested-vm") {
+        stage("run-on-NESTED_LABEL") {
           agent { label "${NESTED_LABEL}" }
           sh 'uname -r; exit 5'
         }
