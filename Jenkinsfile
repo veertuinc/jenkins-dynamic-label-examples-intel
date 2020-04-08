@@ -12,14 +12,14 @@ pipeline {
        label "${AGENT_LABEL}"
   }
    stages {
-     stage("test") {
+     stage("command-in-$AGENT_LABEL") {
        steps {
          sh "uname -a"
        }
      }
-     stage("nested") {
+     stage("nested-stages") {
        stages {
-         stage("new agent") {
+         stage("launch-new-vm") {
            steps {
              script {
               NESTED_LABEL = createDynamicAnkaNode(
@@ -27,12 +27,12 @@ pipeline {
                 masterVmId: 'e56b4aaf-0797-42dd-9ebe-41908bf10a4d', 
                 saveImage: true, 
                 suspend: true,
-                // deleteLatest: true
+                deleteLatest: true
               )
              }
            }
          }
-         stage("run on nested") {
+         stage("run-on-$NESTED_LABEL") {
            agent { label "${NESTED_LABEL}" }
            steps {
              sh 'uname -r'
