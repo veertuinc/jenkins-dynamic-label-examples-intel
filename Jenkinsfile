@@ -37,7 +37,9 @@ pipeline {
         }
         stage("run-on-NESTED_LABEL") {
           agent { label "${NESTED_LABEL}" }
-          sh 'uname -r; exit 5'
+          steps {
+            sh 'uname -r; exit 5'
+          }
         }
         stage("generate-tag-from-nested-vm") {
           steps {
