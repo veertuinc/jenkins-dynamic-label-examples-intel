@@ -37,11 +37,7 @@ pipeline {
         }
         stage("run-on-nested-vm") {
           agent { label "${NESTED_LABEL}" }
-          try {
-            sh 'uname -r; exit 5'
-          } catch (Exception e) {
-            currentBuild.result = 'FAILURE'  //  fail the build on any error
-          }
+          sh 'uname -r; exit 5'
         }
         stage("generate-tag-from-nested-vm") {
           steps {
