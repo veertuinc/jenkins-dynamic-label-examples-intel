@@ -44,7 +44,7 @@ pipeline {
           steps {
             script {
               def getPushResult = ankaGetSaveImageResult( shouldFail: true, timeoutMinutes: 120 )
-              echo "result: $getPushResult"
+              echo "ankaGetSaveImageResult Returned: $getPushResult"
             }
           }
         }
