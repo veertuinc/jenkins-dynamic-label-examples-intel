@@ -43,7 +43,7 @@ pipeline {
         stage("check-generated-tag-from-nested-vm") {
           steps {
             def getPushResult = ankaGetSaveImageResult( shouldFail: true, timeoutMinutes: 120 )
-            echo "result: $getPushResult"
+            sh 'echo "result: $getPushResult"'
           }
         }
       }
