@@ -3,9 +3,9 @@ node(createDynamicAnkaNode(
   tag: 'base:port-forward-22:brew-git:jenkins:openjdk-1.8.0_242'
 )){
     stage('Sleep') { 
-        sh 'sleep 20'
+        sh 'sleep 4'
     }
     stage('Do something') { 
-        sh 'sleep 20'
+        sh 'echo hello'
     } 
 }
