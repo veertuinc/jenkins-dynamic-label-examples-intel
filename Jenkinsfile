@@ -37,7 +37,7 @@ pipeline {
           steps {
             // If buildResults == 'FAILURE', Anka will not push the NESTED_LABEL VM. Example:
             catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
-              sh 'uname -r'
+              sh 'uname -x'
             }
           }
         }
