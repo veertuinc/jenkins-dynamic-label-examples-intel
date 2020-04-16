@@ -5,9 +5,9 @@ def label = createDynamicAnkaNode(
 
 node(label){
     stage('Sleep') { 
-        sh 'sleep 20'
+        sh 'sleep 4'
     }
     stage('Do something') { 
-        sh 'sleep 20'
+        sh 'echo hello'
     } 
 }
