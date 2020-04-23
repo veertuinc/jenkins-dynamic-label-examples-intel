@@ -7,35 +7,26 @@ pipeline {
   agent none
   stages {
     stage('Begin parallel stage execution') {
+      agent {
+        label "${LABEL}"
+      }
       parallel {
         stage("parallel builder command1") {
-          agent {
-            label "${LABEL}"
-          }
           steps {
             echo "command1"
           }
         }
         stage("parallel builder command2") {
-          agent {
-            label "${LABEL}"
-          }
           steps {
             echo "command2"
           }
         }
         stage("parallel builder command3") {
-          agent {
-            label "${LABEL}"
-          }
           steps {
             echo "command3"
           }
         }
         stage("parallel builder command4") {
-          agent {
-            label "${LABEL}"
-          }
           steps {
             echo "command3"
           }
