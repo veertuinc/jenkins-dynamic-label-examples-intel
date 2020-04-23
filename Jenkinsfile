@@ -4,12 +4,11 @@ def LABEL = createDynamicAnkaNode(
 )
 
 pipeline {
-  agent none
+  agent {
+    label "${LABEL}"
+  }
   stages {
     stage('Begin parallel stage execution') {
-      agent {
-        label "${LABEL}"
-      }
       parallel {
         stage("parallel builder command1") {
           steps {
