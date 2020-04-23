@@ -21,7 +21,7 @@ pipeline {
             label "${LABEL}"
           }
           steps {
-            sleep 5
+            echo "command2"
           }
         }
         stage("parallel builder command3") {
@@ -29,7 +29,7 @@ pipeline {
             label "${LABEL}"
           }
           steps {
-            sleep 5
+            echo "command3"
           }
         }
         stage("parallel builder command4") {
@@ -37,7 +37,7 @@ pipeline {
             label "${LABEL}"
           }
           steps {
-            sleep 5
+            echo "command3"
           }
         }
       }
