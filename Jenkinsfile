@@ -8,36 +8,36 @@ pipeline {
   stages {
     stage('Begin parallel stage execution') {
       parallel {
-        stage("parallel builder agent-1") {
+        stage("parallel builder command1") {
           agent {
-              label "${LABEL}"
+            label "${LABEL}"
           }
           steps {
-              sleep 5
+            echo "command1"
           }
         }
-        stage("parallel builder agent-2") {
+        stage("parallel builder command2") {
           agent {
-              label "${LABEL}"
+            label "${LABEL}"
           }
           steps {
-              sleep 5
+            sleep 5
           }
         }
-        stage("parallel builder agent-3") {
+        stage("parallel builder command3") {
           agent {
-              label "${LABEL}"
+            label "${LABEL}"
           }
           steps {
-              sleep 5
+            sleep 5
           }
         }
-        stage("parallel builder agent-4") {
+        stage("parallel builder command4") {
           agent {
-              label "${LABEL}"
+            label "${LABEL}"
           }
           steps {
-              sleep 5
+            sleep 5
           }
         }
       }
