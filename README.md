@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Anka Jenkins Plugin Dynamic Labelling (Simple) Example
-=======
 # jenkins-dynamic-label-example
 Example pipeline scripts for using jenkins anka build plugin with dynamic labels. They are stored in individual branches:
 
@@ -17,4 +14,3 @@ Example pipeline scripts for using jenkins anka build plugin with dynamic labels
 [Nested (Failing) Example](https://github.com/veertuinc/jenkins-dynamic-label-example/tree/nested-failing-example)
 
 [Scripted Example](https://github.com/veertuinc/jenkins-dynamic-label-example/tree/-example)
->>>>>>> master
