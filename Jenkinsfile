@@ -35,14 +35,10 @@ pipeline {
             echo "builder1 - command3"
           }
         }
-        stage('Begin concurrent stage2 execution') {
-          parallel {
-            stage("concurrent builder2 command1") {
-              agent { label "${LABEL2}"}
-              steps {
-                echo "builder2 - command1"
-              }
-            }
+        stage("concurrent builder2 command1") {
+          agent { label "${LABEL2}"}
+          steps {
+            echo "builder2 - command1"
           }
         }
       }
