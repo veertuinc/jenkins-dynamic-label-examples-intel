@@ -6,43 +6,38 @@ def LABEL = createDynamicAnkaNode(
 pipeline {
   agent none
   stages {
-    node(createDynamicAnkaNode(
-      masterVmId: 'c0847bc9-5d2d-4dbc-ba6a-240f7ff08032',
-      tag: 'base:port-forward-22:brew-git:jenkins:openjdk-1.8.0_242'
-    )){
-      stage('Begin parallel stage execution') {
-        parallel {
-          stage("parallel builder agent-1") {
-            agent {
-                label "${LABEL}"
-            }
-            steps {
-                sleep 5
-            }
+    stage('Begin parallel stage execution') {
+      parallel {
+        stage("parallel builder agent-1") {
+          agent {
+              label "${LABEL}"
           }
-          stage("parallel builder agent-2") {
-            agent {
-                label "${LABEL}"
-            }
-            steps {
-                sleep 5
-            }
+          steps {
+              sleep 5
           }
-          stage("parallel builder agent-3") {
-            agent {
-                label "${LABEL}"
-            }
-            steps {
-                sleep 5
-            }
+        }
+        stage("parallel builder agent-2") {
+          agent {
+              label "${LABEL}"
           }
-          stage("parallel builder agent-4") {
-            agent {
-                label "${LABEL}"
-            }
-            steps {
-                sleep 5
-            }
+          steps {
+              sleep 5
+          }
+        }
+        stage("parallel builder agent-3") {
+          agent {
+              label "${LABEL}"
+          }
+          steps {
+              sleep 5
+          }
+        }
+        stage("parallel builder agent-4") {
+          agent {
+              label "${LABEL}"
+          }
+          steps {
+              sleep 5
           }
         }
       }
