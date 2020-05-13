@@ -1,6 +1,6 @@
 def AGENT_LABEL = createDynamicAnkaNode(
   masterVmId: 'c0847bc9-5d2d-4dbc-ba6a-240f7ff08032',
-  tag: 'base:port-forward-22:brew-git:jenkins:openjdk-1.8.0_242',
+  tag: 'base:port-forward-22:brew-git:openjdk-1.8.0_242:jenkins',
   launchMethod: 'ssh',
   credentialsId: 'anka-default-user'
 )
@@ -24,7 +24,7 @@ pipeline {
               NESTED_LABEL = createDynamicAnkaNode(
                 launchMethod: 'ssh', 
                 masterVmId: 'c0847bc9-5d2d-4dbc-ba6a-240f7ff08032',
-                tag: 'base:port-forward-22:brew-git:jenkins:openjdk-1.8.0_242',
+                tag: 'base:port-forward-22:brew-git:openjdk-1.8.0_242:jenkins',
                 saveImage: true,
                 suspend: true
                 // deleteLatest: true // Dangerous: only use if the Template isn't holding other project tags.
