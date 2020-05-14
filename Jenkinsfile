@@ -1,4 +1,5 @@
 pipeline {
+  agent none
   stages {
     stage('Begin parallel stage1 execution') {
       parallel {
