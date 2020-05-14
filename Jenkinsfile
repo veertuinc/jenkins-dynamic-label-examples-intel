@@ -1,5 +1,7 @@
 pipeline {
-  agent {none}
+  agent {
+    label none
+  }
   stages {
     stage('Begin parallel stage1 execution') {
       parallel {
