@@ -17,11 +17,15 @@ pipeline {
       }
     }
     stage("archive") {
-      archiveArtifacts artifacts: 'testfile', fingerprint: true
+      steps {
+        archiveArtifacts artifacts: 'testfile', fingerprint: true
+      }
     }
     stage("archive2") {
-      archiveArtifacts artifacts: 'testfile2', fingerprint: true
-      archiveArtifacts artifacts: 'testfile3', fingerprint: true
+      steps {
+        archiveArtifacts artifacts: 'testfile2', fingerprint: true
+        archiveArtifacts artifacts: 'testfile3', fingerprint: true
+      }
     }
   }
 }
