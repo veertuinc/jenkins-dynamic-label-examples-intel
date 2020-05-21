@@ -11,6 +11,7 @@ pipeline {
   stages {
     stage("hello") {
       steps {
+        sh "echo testing123 > testfile"
         sh "echo testing1234 > testfile2"
         sh "echo testing12345 > testfile3"
       }
