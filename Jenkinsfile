@@ -1,13 +1,3 @@
-#!groovy
-import groovy.json.JsonOutput
-import java.util.Optional
-import hudson.tasks.test.AbstractTestResultAction
-import hudson.model.Actionable
-import hudson.tasks.junit.CaseResult
-import hudson.model.Result
-import hudson.model.Run
-import jenkins.model.CauseOfInterruption.UserInterruption
-
 pipeline {
   agent { 
     label createDynamicAnkaNode(
