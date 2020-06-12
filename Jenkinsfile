@@ -1,19 +1,29 @@
-
-def LABEL = createDynamicAnkaNode(
-  masterVmId: 'c0847bc9-5d2d-4dbc-ba6a-240f7ff08032',
-  tag: 'base:port-forward-22:brew-git:openjdk-1.8.0_242:jenkins',
-  nameTemplate: 'simple-example'
-)
+#!groovy
+import groovy.json.JsonOutput
+import java.util.Optional
+import hudson.tasks.test.AbstractTestResultAction
+import hudson.model.Actionable
+import hudson.tasks.junit.CaseResult
+import hudson.model.Result
+import hudson.model.Run
+import jenkins.model.CauseOfInterruption.UserInterruption
 
 pipeline {
-  agent {
-       label "${LABEL}"
+  agent { 
+    label createDynamicAnkaNode(
+      masterVmId: 'c0847bc9-5d2d-4dbc-ba6a-240f7ff08032',
+      tag: 'base:port-forward-22:brew-git:openjdk-1.8.0_242:jenkins',
+      nameTemplate: 'test-node',
+      credentialsId: 'anka',
+      remoteFS: '/Users/devops/',
+      launchMethod: 'ssh'
+    )
   }
-   stages {
-     stage("hello") {
-       steps {
-         sh "echo hello"
-       }
-     }
+  stages {
+    stage("AnkaConnection") {
+      steps {
+          sh 'hostname'
+      }
+    }
   }
 }
