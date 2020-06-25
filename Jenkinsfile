@@ -25,7 +25,7 @@ pipeline {
         stage("parallel builder1 command3") {
           steps {
             echo "builder1 - command3"
-            hostname
+            sh "hostname"
           }
         }
         stage("parallel builder1 command4") {
