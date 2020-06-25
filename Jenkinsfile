@@ -18,8 +18,7 @@ pipeline {
         }
         stage("parallel jenkins host command1") {
           steps {
-            echo "builder1 - command2"
-            sh "hostname"
+            echo "jenkins host command 1"
           }
         }
         stage("concurrent builder2 command1") {
