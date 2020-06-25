@@ -13,21 +13,25 @@ pipeline {
           }
           steps {
             echo "builder1 - command1"
+            hostname
           }
         }
         stage("parallel builder1 command2") {
           steps {
             echo "builder1 - command2"
+            hostname
           }
         }
         stage("parallel builder1 command3") {
           steps {
             echo "builder1 - command3"
+            hostname
           }
         }
         stage("parallel builder1 command4") {
           steps {
             echo "builder1 - command3"
+            hostname
           }
         }
         stage("concurrent builder2 command1") {
@@ -40,6 +44,7 @@ pipeline {
           }
           steps {
             echo "builder2 - command1"
+            hostname
           }
         }
       }
