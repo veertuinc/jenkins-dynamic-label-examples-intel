@@ -16,19 +16,19 @@ pipeline {
             sh "hostname"
           }
         }
-        stage("parallel builder1 command2") {
+        stage("parallel jenkins host command1") {
           steps {
             echo "builder1 - command2"
             sh "hostname"
           }
         }
-        stage("parallel builder1 command3") {
+        stage("parallel jenkins host command2") {
           steps {
             echo "builder1 - command3"
             sh "hostname"
           }
         }
-        stage("parallel builder1 command4") {
+        stage("parallel jenkins host command3") {
           steps {
             echo "builder1 - command3"
             sh "hostname"
