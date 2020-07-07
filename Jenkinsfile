@@ -3,7 +3,7 @@ def AGENT_LABEL = createDynamicAnkaNode(
   tag: 'base:port-forward-22:brew-git:openjdk-1.8.0_242:jenkins',
   nameTemplate: 'nested-cache-builder-example',
   launchMethod: 'ssh',
-  credentialsId: 'anka-default-user'
+  credentialsId: 'anka'
 )
 def NESTED_LABEL = ''
 
