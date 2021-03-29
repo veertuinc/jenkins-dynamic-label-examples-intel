@@ -1,6 +1,6 @@
 def AGENT_LABEL = createDynamicAnkaNode(
   masterVmId: 'c0847bc9-5d2d-4dbc-ba6a-240f7ff08032',
-  tag: 'base:port-forward-22:brew-git:openjdk-1.8.0_242:jenkins',
+  tag: 'v1',
   launchMethod: 'ssh',
   credentialsId: 'anka',
   nameTemplate: 'nested-cache-builder-failing-example'
@@ -25,7 +25,7 @@ pipeline {
               NESTED_LABEL = createDynamicAnkaNode(
                 launchMethod: 'jnlp', 
                 masterVmId: 'c0847bc9-5d2d-4dbc-ba6a-240f7ff08032',
-                tag: 'base:port-forward-22:brew-git:openjdk-1.8.0_242:jenkins',
+                tag: 'v1',
                 nameTemplate: 'nested-failing-example-nested',
                 saveImage: true, 
                 suspend: true,
