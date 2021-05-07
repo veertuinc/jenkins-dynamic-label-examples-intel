@@ -1,9 +1,9 @@
 pipeline {
   agent {
    label createDynamicAnkaNode(
-      masterVmId: 'c0847bc9-5d2d-4dbc-ba6a-240f7ff08032',
+      masterVmId: '937a445f-9061-4e93-9d5a-3df1ec775132',
       tag: 'v1',
-      nameTemplate: 'simple-example',
+      nameTemplate: 'simple-example-keepalive',
       keepAliveOnError: true
     )
   }
