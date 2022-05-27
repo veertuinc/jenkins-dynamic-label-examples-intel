@@ -13,7 +13,7 @@ pipeline {
           }
           steps {
             echo "builder1 - command1"
-            sh "hostname"
+            sh "hostname; sleep 120;"
           }
         }
         stage("parallel jenkins host command1") {
@@ -33,7 +33,7 @@ pipeline {
           }
           steps {
             echo "builder2 - command1"
-            sh "hostname"
+            sh "hostname; sleep 60;"
           }
         }
       }
