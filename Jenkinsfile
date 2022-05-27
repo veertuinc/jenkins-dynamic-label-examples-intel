@@ -9,7 +9,7 @@ pipeline {
    stages {
      stage("hello") {
        steps {
-         sh "echo hello"
+         sh "echo hello; sleep 120"
        }
      }
   }
