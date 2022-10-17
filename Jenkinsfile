@@ -11,10 +11,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -23,10 +23,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -35,10 +35,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -47,10 +47,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -59,10 +59,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -71,10 +71,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -83,10 +83,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -95,10 +95,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -107,10 +107,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -119,10 +119,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -131,10 +131,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -143,10 +143,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -155,10 +155,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -167,10 +167,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -179,10 +179,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -191,10 +191,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -203,10 +203,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -215,10 +215,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -227,10 +227,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
@@ -239,10 +239,10 @@ pipeline {
           agent {node { label "label-ssh" }}
           steps {
             sh '''
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
-                yes > /dev/null &;
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
+                yes > /dev/null &
                 sleep 180
             '''
           }
