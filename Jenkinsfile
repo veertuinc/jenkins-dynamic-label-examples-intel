@@ -28,7 +28,7 @@ pipeline {
                 nameTemplate: 'nested-example-nested',
                 saveImage: true,
                 suspend: true
-                // deleteLatest: true // Dangerous: only use if the Template isn't holding other project tags.
+                // deleteLatest: true // Dangerous: this removes the latest tag for the Template and that tag may be in-use by other projects in your CI.
               )
             }
           }
